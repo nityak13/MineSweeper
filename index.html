@@ -35,10 +35,19 @@ Users uncover a particular spot based on the coordinates specified.</p>
 <li>Allow flagging of suspected bombs and ensure that these don't get clicked/uncovered.</li>
 </ul>
 
-<p>From a secure coding perspective-</p>
+<p>From a secure coding perspective care was taken to apply the rules and recommendations for Arrays and Expressions as per the SEI CERT Coding Standards. 
+Some of the applications are-</p>
 
 <ul>
-<li>Care was taken to allocate and deallocate the memory for representing the board.</li>
+<li>Care was taken to allocate and deallocate the memory for representing the board and not reading into uninitialized memory.</li>
+<li>Ensuring proper size arguments for variable length arrays.</li>
+<li>Explicit testing to determine success, true, false and equality using if else loops.</li>
+</ul>
+
+<p>As a RED team we evaluated the opponents code base for declarations, initialization and other Miscellaneous standards.
+Some of the evaluation points were-</p>
+
+<ul>
 <li>Used a better randomization function as compared to the usual rand().</li>
 <li>Ensured the only valid inputs were accepted form the user.</li>
 <li>All unexpected conditions were caught and handled appropriately.</li>
